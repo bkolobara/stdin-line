@@ -1,0 +1,13 @@
+{
+  "name": "stdinline",
+  "version": "0.0.1",
+  "description": "Async reading lines from stdin.",
+  "author": "Bernard Kolobara <me@kolobara.com>",
+  "license": "BSD",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^11.13.2"
+  }
+}
