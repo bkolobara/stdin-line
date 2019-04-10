@@ -1,22 +1,33 @@
 const readline = require("readline");
 
-async function getStdinLine(): Promise<string> {
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
+export class StdinLine {
+  rl: any;
 
-  return new Promise((resolve, reject) => {
-    rl.on("line", (input: string) => {
-      resolve(input);
-      rl.close();
+  constructor() {
+    this.rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
     });
-  });
+  }
+
+  async getLine(): Promise<string> {
+    return new Promise((resolve, reject) => {
+      this.rl.on("line", (input: string) => {
+        resolve(input);
+      });
+    });
+  }
+
+  close() {
+    this.rl.close();
+  }
 }
 
 (async function() {
-  let x = await getStdinLine();
+  let stdl = new StdinLine();
+  let x = await stdl.getLine();
   console.log(x);
-  let m = await getStdinLine();
+  let m = await stdl.getLine();
   console.log(m);
+  stdl.close();
 })();
