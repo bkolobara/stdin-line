@@ -1,6 +1,10 @@
 {
   "name": "stdin-line",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bkolobara/stdin-line"
+  },
   "description": "Async reading lines from stdin.",
   "author": "Bernard Kolobara <me@kolobara.com>",
   "license": "BSD-2-Clause",
