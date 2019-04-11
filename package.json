@@ -1,13 +1,23 @@
 {
-  "name": "stdinline",
+  "name": "stdin-line",
   "version": "0.0.1",
   "description": "Async reading lines from stdin.",
   "author": "Bernard Kolobara <me@kolobara.com>",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
-    "@types/node": "^11.13.2"
-  }
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.2",
+    "jest": "^24.7.1"
+  },
+  "scripts": {
+    "test": "tsc && jest",
+    "build": "tsc"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts"
+  ]
 }

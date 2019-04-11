@@ -1,12 +1,17 @@
-const readline = require("readline");
+import readline from "readline";
 
-export class StdinLine {
-  rl: any;
+export class StdinLineStream {
+  rl: readline.Interface;
 
-  constructor() {
+  constructor(stream?: NodeJS.ReadableStream) {
+    let stdin: NodeJS.ReadableStream;
+    if (stream) {
+      stdin = stream;
+    } else {
+      stdin = process.stdin;
+    }
     this.rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
+      input: stdin
     });
   }
 
@@ -18,16 +23,13 @@ export class StdinLine {
     });
   }
 
+  async getLineAsNumbers(): Promise<Array<number>> {
+    const line = await this.getLine();
+    const split_whitespace = line.split(/\s+/);
+    return split_whitespace.map(num => parseFloat(num));
+  }
+
   close() {
     this.rl.close();
   }
 }
-
-(async function() {
-  let stdl = new StdinLine();
-  let x = await stdl.getLine();
-  console.log(x);
-  let m = await stdl.getLine();
-  console.log(m);
-  stdl.close();
-})();
