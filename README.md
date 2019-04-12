@@ -54,6 +54,6 @@ import { StdinLineStream } from "stdin-line";
 
 ## Performance
 
-Some competitive programming challanges can be bound by stdin read performance.
+Some competitive programming challenges can be bound by stdin read performance.
 I'm not sure how big the overhead of this sync/awaits approach is. This needs to
 be further investigated.
