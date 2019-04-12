@@ -1,0 +1,24 @@
+{
+  "name": "google-code-jam-2019",
+  "version": "1.0.0",
+  "description": "Solution for the Google Code Jam problems from 2019's qualification round.",
+  "main": "ignore.js",
+  "author": "Bernard Kolobara <me@kolobara.com>",
+  "license": "MIT",
+  "dependencies": {
+    "stdin-line": "^0.0.1"
+  },
+  "devDependencies": {
+    "rollup": "^1.10.0",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "typescript": "^3.4.3"
+  },
+  "scripts": {
+    "rollup": "rollup -c",
+    "build": "tsc"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}

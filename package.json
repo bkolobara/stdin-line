@@ -1,11 +1,11 @@
 {
   "name": "stdin-line",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/bkolobara/stdin-line"
   },
-  "description": "Async reading lines from stdin.",
+  "description": "A library for reading lines from standard input (stdin) with support for async/await.",
   "author": "Bernard Kolobara <me@kolobara.com>",
   "license": "BSD-2-Clause",
   "private": false,
@@ -14,7 +14,8 @@
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "@types/node": "^11.13.2",
-    "jest": "^24.7.1"
+    "jest": "^24.7.1",
+    "typescript": "^3.4.3"
   },
   "scripts": {
     "test": "tsc && jest",
