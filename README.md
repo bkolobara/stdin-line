@@ -29,11 +29,13 @@ with async/await. After you are done close the stream with `close()`. If you
 don't close the stream the application will continue listening for input and
 never finish.
 
-If you are using it for Google Code Jam you will need to submit only one file.
-In this case the best solution is to use a tool like [rollup](https://rollupjs.org/)
+If you are using it for Google Code Jam you will need to submit only one file. In
+this case the best solution is to use a tool like [rollup](https://rollupjs.org/)
 to boundle this library with your solution and submit it as one regular JavaScript
-file. An example of a complete Google Code Jam qualification round solution can be
-found in the [examples folder](https://github.com/bkolobara/stdin-line/tree/master/examples).
+file. Rollup will require 2 other plugins (`rollup-plugin-node-resolve` and
+`rollup-plugin-commonjs`) to be able to put everything together. An example of a
+complete Google Code Jam qualification round solution can be found in the
+[examples folder](https://github.com/bkolobara/stdin-line/tree/master/examples).
 
 ## Example
 
@@ -49,3 +51,9 @@ import { StdinLineStream } from "stdin-line";
   inputStream.close();
 })();
 ```
+
+## Performance
+
+Some competitive programming challanges can be bound by stdin read performance.
+I'm not sure how big the overhead of this sync/awaits approach is. This needs to
+be further investigated.
