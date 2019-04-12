@@ -674,10 +674,10 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
-stdin-line@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/stdin-line/-/stdin-line-0.0.1.tgz#324d75fe71fb6b141aa3e7c2b9127c50d02b85ee"
-  integrity sha512-0NsUgr5kjx4MHZsn82azSE+etLEDqtjdvSSikEZbQWr06pVO2nrRBKWlZkvhq4sCGKHDC4QM7Pt5Sgf8MPE8PA==
+stdin-line@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/stdin-line/-/stdin-line-0.0.2.tgz#f032fd31e73d1ba26a053d11a00f32f799f9f1e6"
+  integrity sha512-v9/Ka1VAua6MYVI9C24YZIiMPjq7mBKHrcxY/aQzopplIsExLImE8DA5SXo3ZZ0FdV/o5piUfsx5t+O6odBjLw==
 
 to-object-path@^0.3.0:
   version "0.3.0"

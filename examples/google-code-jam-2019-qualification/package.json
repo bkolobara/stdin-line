@@ -6,7 +6,7 @@
   "author": "Bernard Kolobara <me@kolobara.com>",
   "license": "MIT",
   "dependencies": {
-    "stdin-line": "^0.0.1"
+    "stdin-line": "^0.0.2"
   },
   "devDependencies": {
     "rollup": "^1.10.0",
