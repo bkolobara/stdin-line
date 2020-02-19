@@ -33,8 +33,10 @@ export class StdinLineStream {
   async getLine(): Promise<string> {
     return new Promise((resolve, reject) => {
       if (this.buffer.length > 0) {
+        this.rl.pause();
         resolve(this.buffer.shift());
       } else {
+        this.rl.resume();
         this.resolvers.push(resolve);
       }
     });
